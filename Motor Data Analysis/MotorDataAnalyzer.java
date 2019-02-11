@@ -31,7 +31,6 @@ class MotorDataAnalyzer {
    */
   public static void main(String[] args) {
     System.out.println("Analyzing the logged motor data.");
-    // TODO: Ask if this chain of method calls is stylistically okay
     writeReports(analyzeMotorData(getMotorData()));
     System.out.println("The analysis of the motor data has successfully completed.\r\n"
         + "The results have been written to the Motor(num).csv files");
@@ -43,7 +42,6 @@ class MotorDataAnalyzer {
    * @return A 2D array of doubles containing the data from the file.
    */
   private static double[][] getMotorData() {
-    // TODO: Ask if I should read in redundant time values from file
     double[][] motorData = new double[NUM_MOTORS][NUM_LINES];
     Path file = Paths.get("Logger.csv");
     try (var reader = Files.newBufferedReader(file)) {
